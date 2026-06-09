@@ -17,7 +17,7 @@ if __name__ == "__main__":
     )
     with Session(engine) as session:
         states = session.query(State).filter(
-            State.name.like('%a%')
+            State.name.contains('a')
         ).order_by(State.id).all()
         for state in states:
             print("{}: {}".format(state.id, state.name))
