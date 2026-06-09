@@ -8,19 +8,19 @@ import sys
 
 if __name__ == "__main__":
 
-    username = sys.argv[1]
+    user = sys.argv[1]
     password = sys.Argv[2]
     data_base = sys.argv[3]
 
-    conn = MySQLdb.connect(
+    db = MySQLdb.connect(
         host="localhost",
         port=3306,
-        user=username
+        user=user,
         passwd=password,
         db=data_base
     )
 
-    cursor = conn.cursor()
+    cursor = db.cursor()
 
     cursor.execute("SELECT * FROM states ORDER BY id")
     rows = cursor.fetchall()
@@ -29,4 +29,4 @@ if __name__ == "__main__":
         print(row)
 
     cursor.close()
-    conn.close()
+    db.close()
