@@ -3,8 +3,8 @@
 Module to list state from a database
 """
 
-import MySQLdb
 import sys
+import MySQLdb
 
 if __name__ == "__main__":
 
@@ -23,9 +23,11 @@ if __name__ == "__main__":
 
     cursor = db.cursor()
 
-    query = ("SELECT * FROM states "
-             "WHERE name = '{}' "
-             "ORDER BY id ASC".format(state_name_searched))
+    query = (
+        "SELECT * FROM states "
+        "WHERE BINARY name = '{}' "
+        "ORDER BY id ASC;"
+    ).format(state_name_searched)
 
     cursor.execute(query)
 
