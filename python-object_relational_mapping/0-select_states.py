@@ -1,8 +1,10 @@
-import MySQLdb
-import sys
+#!/usr/bin/python3
 """
 Module to list state from a database
 """
+import MySQLdb
+import sys
+
 if __name__ == "__main__":
 
 	user = sys.argv[1]
