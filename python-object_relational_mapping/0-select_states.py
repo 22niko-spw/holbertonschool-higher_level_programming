@@ -1,6 +1,8 @@
 import MySQLdb
 import sys
-
+"""
+Module to list state from a database
+"""
 if __name__ == "__main__":
 
 	user = sys.argv[1]
