@@ -49,7 +49,7 @@ def verify_password(username, password):
 def basic_protected():
     return "Basic Auth: Access Granted"
 
-JWT Auth
+# JWT Auth
 
 @app.route("/login", methods=["POST"])
 def login():
